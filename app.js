@@ -5,6 +5,7 @@ const fs = require("fs");
 const engine = require("ejs-mate");
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 /* ==============================
    1️⃣ View Engine Setup
@@ -181,6 +182,7 @@ app.use((req, res) => {
    8️⃣ Start Server
 ============================== */
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log("Server is listening on port 3000 🚀");
 });
+
