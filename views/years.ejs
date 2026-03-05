@@ -1,0 +1,44 @@
+<%- include("partials/header") %>
+
+<section class="semester-hero d-flex align-items-center justify-content-center text-center">
+    <div class="overlay"></div>
+    <div class="content text-white">
+        <h1 class="fw-bold display-4 mb-3">
+            <%= course.toUpperCase() %> - <%= semester.toUpperCase() %>
+        </h1>
+        <p class="lead">Select Academic Year to View Question Papers</p>
+    </div>
+</section>
+
+<div class="container semester-section">
+
+    <div class="row justify-content-center g-4">
+
+        <% if(years.length === 0) { %>
+            <div class="text-center mt-5">
+                <h4 class="text-muted">No Years Available Yet</h4>
+            </div>
+        <% } %>
+
+        <% years.forEach(function(year) { %>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="semester-card">
+                    <div class="semester-icon">
+                        📅
+                    </div>
+                    <h5 class="fw-bold mt-3">
+                        <%= year %>
+                    </h5>
+                    <a href="/<%= course %>/<%= semester %>/<%= year %>" 
+                       class="btn semester-btn mt-3">
+                        View Papers
+                    </a>
+                </div>
+            </div>
+        <% }) %>
+
+    </div>
+
+</div>
+
+<%- include("partials/fotter") %>

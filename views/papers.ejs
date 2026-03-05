@@ -1,0 +1,67 @@
+<%- include("partials/header") %>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="papers-hero d-flex align-items-center justify-content-center text-center">
+    <div class="overlay"></div>
+    <div class="content text-white">
+        <h1 class="fw-bold display-5">
+            <%= course.toUpperCase() %> - 
+            <%= semester.toUpperCase() %> - 
+            <%= year %>
+        </h1>
+        <p class="lead">Download Available Question Papers</p>
+    </div>
+</section>
+
+<div class="container papers-section my-5">
+
+    <!-- ================= PAPERS GRID ================= -->
+    <div class="row g-4">
+
+        <% if (!files || files.length === 0) { %>
+            <div class="text-center mt-4">
+                <div class="alert alert-danger shadow-sm">
+                    No Papers Available for <%= year %> ❌
+                </div>
+            </div>
+        <% } %>
+
+        <% if(files) { files.forEach(function(file) { %>
+            <div class="col-md-6 col-lg-4">
+                <div class="card paper-card shadow border-0 h-100 rounded-4">
+                    <div class="card-body text-center p-4">
+
+                        <div class="paper-icon mb-3">
+                            📄
+                        </div>
+
+                        <h6 class="fw-bold mb-3 text-break">
+                            <%= file %>
+                        </h6>
+
+                        <a href="/download/<%= course %>/<%= semester %>/<%= year %>/<%= file %>" 
+                           class="btn paper-btn px-4">
+                            Download
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        <% }) } %>
+
+    </div>
+
+    <!-- ================= BACK BUTTONS ================= -->
+    <div class="text-center mt-5">
+        <a href="/<%= course %>/<%= semester %>" class="btn btn-secondary me-2">
+            ⬅ Back to Years
+        </a>
+
+        <a href="/<%= course %>" class="btn btn-dark">
+            ⬅ Back to Semesters
+        </a>
+    </div>
+
+</div>
+
+<%- include("partials/fotter") %>

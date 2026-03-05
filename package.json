@@ -1,0 +1,19 @@
+{
+  "name": "major",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs-mate": "^4.0.0",
+    "express": "^5.2.1",
+    "mongoose": "^9.2.3",
+    "multer": "^2.1.0",
+    "path": "^0.12.7"
+  },
+  "keywords": [],
+  "description": ""
+}

@@ -1,0 +1,88 @@
+<%- include("partials/header") %>
+
+<!-- ================= HERO SECTION ================= -->
+<div class="hero-section d-flex align-items-center text-white">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold mb-3 animate-fade">
+            GL Bajaj Exam Portal
+        </h1>
+        <p class="lead mb-4 animate-fade">
+            Download Previous Year Question Papers Easily
+        </p>
+        <a href="/download" class="btn btn-warning btn-lg px-4 shadow">
+            Browse All Papers
+        </a>
+    </div>
+</div>
+
+<!-- ================= COURSE SECTION ================= -->
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Explore Programs</h2>
+        <p class="text-muted">Select your course to view available papers</p>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- MCA -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card program-card h-100 text-center border-0 shadow">
+                <div class="card-body p-4">
+                    <div class="icon mb-3">🎓</div>
+                    <h5 class="fw-bold">MCA</h5>
+                    <a href="/mca" class="btn btn-outline-primary mt-3">
+                        View Papers
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- MBA -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card program-card h-100 text-center border-0 shadow">
+                <div class="card-body p-4">
+                    <div class="icon mb-3">📊</div>
+                    <h5 class="fw-bold">MBA</h5>
+                    <a href="/mba" class="btn btn-outline-success mt-3">
+                        View Papers
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- B.Tech -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card program-card h-100 text-center border-0 shadow">
+                <div class="card-body p-4">
+                    <div class="icon mb-3">🛠</div>
+                    <h5 class="fw-bold">B.Tech</h5>
+                    <a href="/btech" class="btn btn-outline-warning mt-3">
+                        View Papers
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- All Exams -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card program-card h-100 text-center border-0 shadow bg-dark text-white">
+                <div class="card-body p-4">
+                    <div class="icon mb-3">📂</div>
+                    <h5 class="fw-bold">All Exams</h5>
+                    <a href="/download" class="btn btn-light mt-3">
+                        Download All
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="text-center mt-5">
+        <a href="/upload" class="btn btn-danger btn-lg px-4 shadow">
+            Upload New Paper
+        </a>
+    </div>
+</div>
+
+<%- include("partials/fotter") %>

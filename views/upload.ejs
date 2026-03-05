@@ -1,0 +1,40 @@
+<%- include("partials/header") %>
+
+<div class="card shadow-lg border-0 rounded-4 mx-auto" style="max-width:600px;">
+    <div class="card-body p-4">
+
+        <h3 class="mb-4 text-center fw-bold">Upload PDF</h3>
+
+        <!-- Upload Form -->
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            
+            <div class="mb-3">
+                <label class="form-label">Select PDF</label>
+                <input type="file" 
+                       name="pdf" 
+                       accept="application/pdf"
+                       class="form-control"
+                       required>
+            </div>
+
+            <div class="text-center mb-3">
+                <button class="btn btn-success px-4">
+                    Upload
+                </button>
+            </div>
+        </form>
+
+        <!-- Divider -->
+        <hr>
+
+        <!-- Download Page Button -->
+        <div class="text-center">
+            <a href="/download" class="btn btn-primary px-4">
+                Go to Download Page
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<%- include("partials/fotter") %>

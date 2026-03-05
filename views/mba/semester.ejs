@@ -1,0 +1,29 @@
+<%- include("partials/header") %>
+
+<div class="container my-5">
+
+    <div class="text-center mb-5">
+        <h2 class="fw-bold text-uppercase">
+            <%= course %> - Semesters
+        </h2>
+    </div>
+
+    <div class="row g-4">
+
+        <% semesters.forEach(function(sem) { %>
+            <div class="col-md-4">
+                <div class="card shadow border-0 text-center p-4 rounded-4">
+                    <h5 class="fw-bold"><%= sem.toUpperCase() %></h5>
+                    <a href="/<%= course %>/<%= sem %>" 
+                       class="btn btn-primary mt-3">
+                        View Years
+                    </a>
+                </div>
+            </div>
+        <% }) %>
+
+    </div>
+
+</div>
+
+<%- include("partials/fotter") %>
